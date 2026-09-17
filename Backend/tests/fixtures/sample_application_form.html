@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Careers - Apply for Backend Engineer</title></head>
+<body>
+  <h1>Apply: Backend Engineer</h1>
+  <form id="apply">
+    <!-- Explicit label association -->
+    <div><label for="fn">First Name *</label><input id="fn" name="first_name" type="text" required></div>
+    <div><label for="ln">Last Name *</label><input id="ln" name="last_name" type="text" required></div>
+
+    <!-- Label inferred from the input type, not the text -->
+    <div><label for="em">Email Address *</label><input id="em" name="email" type="email" placeholder="your.name@company.com" required></div>
+
+    <!-- Wrapping label -->
+    <label>Mobile number <input name="phone" type="tel"></label>
+
+    <!-- aria-label only -->
+    <div><input name="li" type="url" aria-label="LinkedIn Profile URL"></div>
+    <div><input name="gh" type="url" aria-label="GitHub"></div>
+
+    <!-- Nearby text, no label element -->
+    <div>Current Company<input name="cc" type="text"></div>
+    <div>Years of Experience<input name="yoe" type="text"></div>
+    <div><label for="sal">Expected Salary</label><input id="sal" name="sal" type="text"></div>
+    <div><label for="np">Notice Period</label><input id="np" name="np" type="text"></div>
+
+    <!-- Select with an answerable screening question -->
+    <div>
+      <label for="auth">Are you authorized to work in this country?</label>
+      <select id="auth" name="auth">
+        <option value="">Select…</option>
+        <option>Citizen</option>
+        <option>Permanent resident</option>
+        <option>Work visa</option>
+        <option>Needs sponsorship</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="reloc">Are you willing to relocate?</label>
+      <select id="reloc" name="reloc"><option value="">Select…</option><option>Yes</option><option>No</option></select>
+    </div>
+
+    <!-- An answerable checkbox: must be ticked, unlike the terms box below -->
+    <div><label><input type="checkbox" name="remote_ok"> Are you open to remote work?</label></div>
+
+    <!-- Free-text reused from the profile summary -->
+    <div><label for="about">Tell us about yourself</label><textarea id="about" name="about"></textarea></div>
+
+    <!-- A saved custom answer -->
+    <div><label for="heard">How did you hear about this role?</label><input id="heard" name="heard" type="text"></div>
+
+    <!-- A question with no saved answer, and required -->
+    <div><label for="proud">What project are you most proud of? *</label><textarea id="proud" name="proud" required></textarea></div>
+
+    <!-- MUST NOT be touched -->
+    <div><label for="dob">Date of Birth</label><input id="dob" name="dob" type="text"></div>
+    <div><label for="gender">Gender</label>
+      <select id="gender" name="gender"><option value="">Select…</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select>
+    </div>
+    <div><label for="ssn">Social Security Number</label><input id="ssn" name="ssn" type="text"></div>
+    <div><label for="vet">Veteran status</label><input id="vet" name="vet" type="text"></div>
+    <div><label><input type="checkbox" name="terms"> I agree to the terms and conditions</label></div>
+
+    <!-- Prefilled: must be left alone -->
+    <div><label for="src">Source</label><input id="src" name="src" type="text" value="Careers page"></div>
+
+    <!-- Resume upload -->
+    <div><label for="cv">Upload your resume / CV</label><input id="cv" name="resume" type="file"></div>
+
+    <button type="submit">Submit application</button>
+  </form>
+</body>
+</html>
